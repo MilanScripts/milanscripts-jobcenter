@@ -1,7 +1,7 @@
 fx_version 'cerulean'
 game 'gta5'
 
-author 'Arnhem Roleplay <MilanScripts>' -->> *Scarlot Here*: He somehow managed to mess up his own name, so I fixed it for him.
+author 'Arnhem Roleplay <MilanScripts>'
 description 'A FiveM script enabling players to choose jobs via an NPC, with customizable settings, anti-abuse features, and map integration.'
 version '1.0.0'
 

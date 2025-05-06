@@ -44,6 +44,6 @@ Config.Jobs = {
 Config.Key = 38 -- E
 
 Config.AntiAbuse = {
-    mode = 'ahrp', -- 'drop' or 'trigger' (dont use AHRP since its created for Arnhem Roleplay)
+    mode = 'drop', -- 'drop' or 'trigger'
     customTrigger = 'banPlayer',
 }

@@ -7,7 +7,8 @@ CreateThread(function()
     RequestModel(Config.NPC.model)
     while not HasModelLoaded(Config.NPC.model) do Wait(0) end
 
-    npc = CreatePed(0, Config.NPC.model, Config.NPC.coords.x, Config.NPC.coords.y, Config.NPC.coords.z - 1.0, Config.NPC.coords.w, false, true)
+    npc = CreatePed(0, Config.NPC.model, Config.NPC.coords.x, Config.NPC.coords.y, Config.NPC.coords.z - 1.0,
+        Config.NPC.coords.w, false, true)
 
     if Config.NPC.scenario then TaskStartScenarioInPlace(npc, Config.NPC.scenario, 0, true) end
     if Config.NPC.freeze then FreezeEntityPosition(npc, true) end
@@ -16,7 +17,7 @@ CreateThread(function()
     SetBlockingOfNonTemporaryEvents(npc, true)
 
     if Config.Blip.enabled then
-        local blip = AddBlipForCoord(Config.NPC.coords.xyz)
+        local blip = AddBlipForCoord(Config.NPC.coords.x, Config.NPC.coords.y, Config.NPC.coords.z)
         SetBlipSprite(blip, Config.Blip.sprite)
         SetBlipDisplay(blip, 4)
         SetBlipScale(blip, Config.Blip.scale)
@@ -38,7 +39,7 @@ CreateThread(function()
                     icon = 'fas fa-briefcase',
                     label = locale('open_menu'),
                     onSelect = function()
-                        openJobMenu()
+                        OpenJobMenu()
                     end
                 }
             }
@@ -61,7 +62,7 @@ CreateThread(function()
                     end
 
                     if IsControlJustReleased(0, Config.Key) then
-                        openJobMenu()
+                        OpenJobMenu()
                     end
                 else
                     if shown then
@@ -76,7 +77,7 @@ CreateThread(function()
     end
 end)
 
-function openJobMenu()
+function OpenJobMenu()
     local options = {}
 
     for _, job in pairs(Config.Jobs) do

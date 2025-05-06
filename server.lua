@@ -14,9 +14,7 @@ RegisterServerEvent('milanscripts:setJob', function(jobName)
     end
 
     if not valid then
-        if Config.AntiAbuse.mode == 'ahrp' then
-            exports["ahrp-anticheat"]:ban(src, 'Trigger abuse in milanscripts:setJob.')
-        elseif Config.AntiAbuse.mode == 'drop' then
+        if Config.AntiAbuse.mode == 'drop' then
             DropPlayer(src, 'Trigger abuse detected.')
         elseif Config.AntiAbuse.mode == 'trigger' then
             TriggerEvent(Config.AntiAbuse.customTrigger, src, 'Trigger abuse in milanscripts:setJob')

@@ -1,50 +1,53 @@
+# MilanScripts Job Center | ESX + ox_lib
 
-# **MilanScripts Job Center (ESX + ox_lib)**
+Welcome to the MilanScripts Job Center! This script is designed for FiveM servers and allows players to interact with an NPC to select their job from a menu. It supports **E-key interaction** or **ox_target**, customizable job titles and descriptions, anti-abuse features, and a configurable map blip.
 
-A FiveM job center system that allows players to interact with an NPC to choose their job from a menu. The script supports both **E-key interaction** and **ox_target**, configurable job titles and descriptions, anti-abuse features, and a customizable map blip.
+> [!IMPORTANT]  
+> Ensure you have **ox_lib** and **es_extended** installed on your server before using this script. Links to these dependencies are provided below.
 
-## **Preview Screenshots**
+## Features ✨
 
-### NPC Interaction
-![NPC Preview](https://milanscripts.vercel.app/uwv-1.png)
+- 🗺️ **NPC Interaction** | Players can interact with an NPC to open the job menu.
+- 🔑 **Key or ox_target** | Toggle between **E-key** or **ox_target** for interaction.
+- 🛠️ **Customizable Jobs** | Easily configure job titles, descriptions, and more in `config.lua`.
+- 🛡️ **Anti-Abuse** | Drop players or trigger a custom ban for exploit attempts.
+- 📍 **Map Blip** | Mark the job center on the map with a customizable blip.
 
-### Job Menu UI
-![UI Preview](https://milanscripts.vercel.app/uwv-2.png)
+## Upcoming Features 🚀
 
-## **Features**
+- 🌐 **Multi-Language Support** | Expand localization options for more languages.
+- 🖼️ **Custom UI Themes** | Personalize the job menu interface.
 
-- **NPC Interaction**: The NPC will appear on the map and players can interact with it to open the job menu.
-- **Key or ox_target**: You can toggle between using the **E key** or **ox_target** to interact with the NPC.
-- **Customizable Jobs**: Easily configure job titles and descriptions directly in `config.lua`.
-- **Anti-Abuse**: Choose between **dropping** a player or triggering a custom **ban** if they try to exploit the system.
-- **Map Blip**: The job center is marked on the map with a configurable blip.
+## Installation 🛠️
 
-## **Installation**
+To get started with this project, follow these steps:
 
-1. Download or clone this repository into your server’s resources directory.
-2. Add the following to your `server.cfg`:
+1. Clone or download this repository into your server’s `resources` directory.
+2. Add the following line to your `server.cfg`:
 
     ```bash
-    start your-resource-name
+    start milanscripts-jobcenter
     ```
 
-3. Edit `config.lua` to customize the NPC coordinates, job details, anti-abuse settings, and the use of **ox_target** or the **E key**.
-
-4. Make sure **ox_lib** and **es_extended** are installed on your server. If you don't have them, you can get them here:
+3. Edit `config.lua` to customize NPC settings, job details, anti-abuse options, and interaction mode.
+4. Ensure the following dependencies are installed:
     - [ox_lib](https://github.com/overextended/ox_lib)
     - [es_extended](https://github.com/ESX-Org/es_extended)
 
-## **Configuration**
+## Usage 📖
 
-You can configure the following in the `config.lua`:
+Once installed, players can interact with the NPC to open the job menu. You can configure the following in `config.lua`:
 
-- **NPC Settings**: Model, coordinates, scenario (animations), and more.
-- **Job List**: Add or remove jobs, change job names, titles, and descriptions.
-- **Interaction Mode**: Choose between E-key or ox_target.
-- **Anti-Abuse**: Select between dropping players or using a custom ban trigger for any suspicious behavior.
-- **Blip Settings**: Enable or disable the map blip, and adjust its properties (color, scale, label).
+| Option            | Description                                      |
+|-------------------|--------------------------------------------------|
+| **NPC Settings**  | Model, coordinates, animations, and more.        |
+| **Job List**      | Add or remove jobs, change names and descriptions. |
+| **Interaction**   | Choose between **E-key** or **ox_target**.       |
+| **Anti-Abuse**    | Drop players or trigger a custom ban.            |
+| **Blip Settings** | Enable/disable the map blip and adjust its properties. |
 
 ### Example: Customizing Jobs in `config.lua`
+
 ```lua
 Config.Jobs = {
     {
@@ -70,16 +73,12 @@ Config.Jobs = {
 }
 ```
 
-## **Localization**
+## Localization 🌍
 
-The script supports multiple languages via JSON locale files:
-
-- **English** (`locales/en.json`)
-- **Dutch** (`locales/nl.json`)
-
-You can add additional languages by creating new JSON files in the `locales/` folder.
+The script supports multiple languages via JSON locale files. You can add additional languages by creating new JSON files in the `locales/` folder.
 
 ### Example: Localization (`locales/en.json`)
+
 ```json
 {
   "open_menu": "Talk to Job Center",
@@ -87,14 +86,16 @@ You can add additional languages by creating new JSON files in the `locales/` fo
 }
 ```
 
-### Example: Localization (`locales/nl.json`)
-```json
-{
-  "open_menu": "Praat met het Jobcenter",
-  "menu_title": "Banen Centrum"
-}
-```
+## Credits 🙏
 
-## **License**
+This project was created by **MilanScripts**
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## License 📜
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact 📬
+
+If you have any questions or feedback, feel free to reach out to me on [Discord](https://discord.gg/TzxdeAzGSe).
+
+Thank you for using MilanScripts Job Center! 🎉

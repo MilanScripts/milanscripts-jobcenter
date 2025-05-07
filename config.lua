@@ -18,6 +18,7 @@ Config.Blip = {
     scale = 0.7
 }
 
+Config.CooldownTime = 3 -- Cooldown time in seconds for job change requests
 Config.Webhook = "X" -- Discord webhook for logging job changes
 
 Config.Jobs = {

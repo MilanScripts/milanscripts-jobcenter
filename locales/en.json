@@ -1,4 +1,5 @@
 {
-    "open_menu": "Talk to Job Center Employee",
+    "open_menu": "[E] Talk to Job Center Employee",
+    "open_target": "Talk to Job Center Employee",
     "menu_title": "Job Center | Job Board"
 }

@@ -37,7 +37,7 @@ CreateThread(function()
                 {
                     name = 'jobcenter',
                     icon = 'fas fa-briefcase',
-                    label = locale('open_menu'),
+                    label = locale('open_target'),
                     onSelect = function()
                         OpenJobMenu()
                     end

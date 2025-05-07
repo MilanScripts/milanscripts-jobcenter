@@ -18,6 +18,8 @@ Config.Blip = {
     scale = 0.7
 }
 
+Config.Webhook = "X" -- Discord webhook for logging job changes
+
 Config.Jobs = {
     {
         name = 'police',
@@ -44,6 +46,7 @@ Config.Jobs = {
 Config.Key = 38 -- E
 
 Config.AntiAbuse = {
-    mode = 'drop', -- 'drop' or 'trigger'
+    mode = 'trigger', -- 'drop' or 'trigger'
+    webhook = "X", -- Discord webhook for logging abuse attempts
     customTrigger = 'banPlayer',
 }
